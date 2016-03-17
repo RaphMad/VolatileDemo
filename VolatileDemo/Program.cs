@@ -7,13 +7,14 @@
    {
       static void Main()
       {
-         // var loop = new BoolHolder { _isOn = true };
          bool loop = true;
+         // var loop = new BoolHolder { _isOn = true };
+         // var loop = new LockedBoolHolder { _isOn = true };
 
          new Thread(() =>
                     {
                        Console.WriteLine("Loop started...");
-                       while (loop){}
+                       while (loop) {}
                        Console.WriteLine("Loop stopped...");
                     }).Start();
 
